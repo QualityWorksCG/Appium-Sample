@@ -13,4 +13,9 @@ public class QualityWorksLabelTest extends AppiumTest {
     public void checkHomeLabel() throws Exception {
         HomePage.loaded();
     }
+
+    @Test
+    public void clickCounterButton() throws Exception {
+        HomePage.clickCounterButton();
+    }
 }
