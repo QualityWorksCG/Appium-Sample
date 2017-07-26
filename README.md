@@ -60,12 +60,12 @@ mvn test
 
 ## Running the sample tests
 
-To run the sample tests you need to set the following enviroment variables "ios_app_path" and "android_app_path" on your system. These need to be defined globally to be the path to the iOS .app file and Android .apk file respectively. For help setting environment variables on your system check out the following links. 
+To run the sample tests you first need to set the following enviroment variables "ios_app_path" and "android_app_path" on your system. These need to be defined globally to be the path to the iOS .app file and Android .apk file respectively. For help setting environment variables on your system check out the following links. 
 
 - https://www.howtogeek.com/51807/how-to-create-and-use-global-system-environment-variables/ (Even though it's an outdated version of Windows in the Screenshots, the process is the same)
 - https://www.cyberciti.biz/faq/set-environment-variable-unix/ (Unix and Linux Environments)
 
-and the execute the following command 
+and the execute the following command from inside the project directory.
 
 
 ```
