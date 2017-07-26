@@ -10,20 +10,20 @@ import org.junit.Assert;
 
 import java.util.Objects;
 
-import static qualityworks.sample.ios.util.Helpers.back;
-import static qualityworks.sample.ios.util.Helpers.element;
+import static qualityworks.sample.Helpers.back;
+import static qualityworks.sample.Helpers.element;
 
 /** Page object for the home page **/
-public abstract class HomePage {
+public class IOSHomePage {
 
-    public static void clickCounterButton() {
+    public void clickCounterButton() {
         loaded();
         element(MobileBy.AccessibilityId("Click Counter")).click();
         back();
     }
 
     /** Verify the home page has loaded **/
-    public static void loaded() {
+    public void loaded() {
 
         MobileElement headingLabel = element(MobileBy.AccessibilityId("Quality Works Label"));
         Assert.assertTrue(Objects.equals(headingLabel.getAttribute("value"), "Quality Works Appium iOS Sample"));

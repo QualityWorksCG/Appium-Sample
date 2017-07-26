@@ -1,21 +1,20 @@
 package qualityworks.sample.ios;
 
 import org.junit.Test;
-import qualityworks.sample.ios.page.HomePage;
-import qualityworks.sample.ios.util.AppiumTest;
+import qualityworks.sample.ios.util.AppiumIOSTest;
 
 /**
  * Created by Javon Davis on 7/24/17.
  */
-public class QualityWorksLabelTest extends AppiumTest {
+public class QualityWorksLabelIOSTest extends AppiumIOSTest {
 
     @Test
     public void checkHomeLabel() throws Exception {
-        HomePage.loaded();
+        home.loaded();
     }
 
     @Test
     public void clickCounterButton() throws Exception {
-        HomePage.clickCounterButton();
+        home.clickCounterButton();
     }
 }
