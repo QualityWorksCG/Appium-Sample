@@ -55,7 +55,9 @@ public class AppiumIOSTest {
         // Set job name
         capabilities.setCapability("name", "Quality Works iOS Sample" + date);
 
-        String appPath = "/Users/qualityworks/projects/Quality Works iOS Sample/DerivedData/Quality Works iOS Sample/Build/Products/Debug-iphonesimulator/Quality Works iOS Sample.app";
+        String appPath = System.getenv("ios_app_path");
+        assert appPath != null: "Path to iOS app is not set";
+        System.out.println("iOS App path: "+ appPath);
         capabilities.setCapability("app", appPath);
         driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 

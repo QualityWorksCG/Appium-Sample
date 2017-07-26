@@ -51,7 +51,9 @@ public class AppiumAndroidTest {
 
         // Set job name
         capabilities.setCapability("name", "Quality Works Android Sample" + date);
-        String appPath = "/Users/qualityworks/AndroidStudioProjects/QualityWorksSampleAndroid/app/build/outputs/apk/app-debug.apk";
+        String appPath = System.getenv("android_app_path");
+        assert appPath != null: "Path to Android app is not set";
+        System.out.println("Android App path: "+ appPath);
         capabilities.setCapability("app", appPath);
         driver = new AppiumDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 

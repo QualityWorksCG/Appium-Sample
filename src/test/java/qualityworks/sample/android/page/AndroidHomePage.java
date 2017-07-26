@@ -21,6 +21,6 @@ public class AndroidHomePage {
         MobileElement headingLabel = element(MobileBy.AccessibilityId("Heading"));
         String labelText = headingLabel.getAttribute("text");
         String labelTextCorrect = "Quality Works Appium Android Sample";
-        Assert.assertTrue(labelText+ " is not equal to" + labelTextCorrect, Objects.equals(labelText, labelTextCorrect));
+        Assert.assertTrue(labelText + " should be " + labelTextCorrect, Objects.equals(labelText, labelTextCorrect));
     }
 }
