@@ -41,3 +41,5 @@ Basically you need to have appium installed along with appium-doctor. I won't go
 - http://appium.io/slate/en/master/?java#
 
 Those links should be enough to give you all the information you need about appium, appium-doctor and getting set up. Once you have everything set up remember to use appium doctor to confirm. See below how the results of your appium doctor check should look before moving on. 
+
+![Appium Doctor Screenshot](./appium_doctor_screenshot)
