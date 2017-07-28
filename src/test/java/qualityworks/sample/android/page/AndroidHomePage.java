@@ -14,7 +14,6 @@ import static qualityworks.sample.Helpers.element;
  */
 public class AndroidHomePage {
 
-
     /** Verify the home page has loaded **/
     public void loaded() {
 

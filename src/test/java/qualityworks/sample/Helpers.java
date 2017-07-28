@@ -4,10 +4,12 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.FileDetector;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -146,5 +148,14 @@ public abstract class Helpers {
      */
     public static List<MobileElement> waitAll(By locator) {
         return w(driverWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator)));
+    }
+
+    public static FileDetector fileDetector() {
+        return new FileDetector() {
+            @Override
+            public File getLocalFile(CharSequence... keys) {
+                return null;
+            }
+        };
     }
 }

@@ -6,7 +6,7 @@ import qualityworks.sample.android.util.AppiumAndroidTest;
 /**
  * Created by Javon Davis on 7/26/17.
  */
-public class QualityWorksLabelAndroidTest extends AppiumAndroidTest {
+public class QualityWorksAndroidTest extends AppiumAndroidTest {
 
     @Test
     public void checkHomeLabel() throws Exception {

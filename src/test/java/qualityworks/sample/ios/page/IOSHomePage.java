@@ -7,6 +7,7 @@ package qualityworks.sample.ios.page;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import org.junit.Assert;
+import qualityworks.sample.Helpers;
 
 import java.util.Objects;
 
@@ -18,9 +19,18 @@ public class IOSHomePage {
 
     public void clickCounterButton() {
         loaded();
-        element(MobileBy.AccessibilityId("Click Counter")).click();
-        back();
+        element(MobileBy.AccessibilityId("Show Click Counter")).click();
     }
+
+    public void back() {
+        Helpers.back();
+    }
+
+    public void clickWorkLocationButton() {
+        loaded();
+        element(MobileBy.AccessibilityId("Show Work Location")).click();
+    }
+
 
     /** Verify the home page has loaded **/
     public void loaded() {

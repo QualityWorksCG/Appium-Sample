@@ -6,9 +6,12 @@ import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.FileDetector;
 import qualityworks.sample.Helpers;
 import qualityworks.sample.ios.page.IOSHomePage;
+import qualityworks.sample.ios.page.IOSWorkLocationPage;
 
+import java.io.File;
 import java.net.URL;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -24,6 +27,7 @@ public class AppiumIOSTest {
      * Page object references.*
      */
     protected IOSHomePage home;
+    protected IOSWorkLocationPage workLocation;
 
     /**
      * wait wraps Helpers.wait *
@@ -44,6 +48,7 @@ public class AppiumIOSTest {
     public void setUp() throws Exception {
 
         home = new IOSHomePage();
+        workLocation = new IOSWorkLocationPage();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("appium-version", "1.6.5");
