@@ -42,4 +42,32 @@ Basically you need to have appium installed along with appium-doctor. I won't go
 
 Those links should be enough to give you all the information you need about appium, appium-doctor and getting set up. Once you have everything set up remember to use appium doctor to confirm. See below how the results of your appium doctor check should look before moving on. 
 
-![Appium Doctor Screenshot](./appium_doctor_screenshot)
+![Appium Doctor Screenshot](.README/appium_doctor_screenshot.png)
+
+At this point everything for Appium should be installed and in that process you should've installed Apache Maven. If not take a second to install Maven.
+
+Here's a helpful link for doing that:
+
+- https://maven.apache.org/install.html
+
+## Running the tests
+
+To run your tests simply you need to  execute the following command from inside the project directory. 
+
+```
+mvn test
+```
+
+## Running the sample tests
+
+To run the sample tests you first need to set the following enviroment variables "ios_app_path" and "android_app_path" on your system. These need to be defined globally to be the path to the iOS .app file and Android .apk file respectively. For help setting environment variables on your system check out the following links. 
+
+- https://www.howtogeek.com/51807/how-to-create-and-use-global-system-environment-variables/ (Even though it's an outdated version of Windows in the Screenshots, the process is the same)
+- https://www.cyberciti.biz/faq/set-environment-variable-unix/ (Unix and Linux Environments)
+
+and the execute the following command from inside the project directory.
+
+
+```
+mvn test
+```
