@@ -28,4 +28,17 @@ public class QualityWorksIOSTest extends AppiumIOSTest {
         workLocation.clickSubmit();
         wait(MobileBy.AccessibilityId("Feedback"));
     }
+
+    @Test
+    public void clickCounterTest() throws Exception {
+        home.loaded();
+        home.clickCounterButton();
+        clickCounter.loaded();
+        for(int i = 0; i < 5; i ++)
+            clickCounter.clickIncreaseButton();
+
+        for(int i = 0; i < 3; i ++)
+            clickCounter.clickDecreaseButton();
+
+    }
 }

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.FileDetector;
 import qualityworks.sample.Helpers;
+import qualityworks.sample.ios.page.IOSClickCounterPage;
 import qualityworks.sample.ios.page.IOSHomePage;
 import qualityworks.sample.ios.page.IOSWorkLocationPage;
 
@@ -27,6 +28,7 @@ public class AppiumIOSTest {
      * Page object references.*
      */
     protected IOSHomePage home;
+    protected IOSClickCounterPage clickCounter;
     protected IOSWorkLocationPage workLocation;
 
     /**
@@ -49,6 +51,7 @@ public class AppiumIOSTest {
 
         home = new IOSHomePage();
         workLocation = new IOSWorkLocationPage();
+        clickCounter = new IOSClickCounterPage();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("appium-version", "1.6.5");

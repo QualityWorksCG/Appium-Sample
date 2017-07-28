@@ -48,6 +48,8 @@ public class AppiumAndroidTest {
         capabilities.setCapability("appium-version", "1.6.5");
         capabilities.setCapability("platformName", "android");
         capabilities.setCapability("deviceName", "emulator-5554");
+        capabilities.setCapability("appPackage", "com.qualityworkscg.qualityworkssampleandroid");
+        capabilities.setCapability("appActivity", ".HomeActivity");
 
         // Set job name
         capabilities.setCapability("name", "Quality Works Android Sample" + date);
